@@ -1,18 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { invoke } from '@forge/bridge';
+import React, {Fragment, useEffect, useState} from 'react';
+import GitHubForm from "./GitHubForm";
 
-function App() {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        invoke('getText', { example: 'my-invoke-variable' }).then(setData);
-    }, []);
-
-    return (
-        <div>
-            {data ? data : 'Loading...'}
-        </div>
-    );
+const App = () => {
+    return (<>
+        <GitHubForm> </GitHubForm>
+    </>);
 }
-
 export default App;
