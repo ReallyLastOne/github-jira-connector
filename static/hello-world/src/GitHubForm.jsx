@@ -4,12 +4,14 @@ import Button from "@atlaskit/button";
 import Textfield from '@atlaskit/textfield';
 import Form, {ErrorMessage, Field, FormFooter, ValidMessage} from '@atlaskit/form';
 import {Box} from '@atlaskit/primitives';
+import {useTranslation} from "react-i18next";
 
 const GitHubForm = () => {
     const [fieldValue, setFieldValue] = useState('');
     const [fieldHasError, setFieldHasError] = useState(false);
     const [isFieldNotFocused, setIsFieldNotFocused] = useState(false);
     const REGEXP_GITHUB_REPO_URI = /^https?:\/\/github\.com\/([\w\d-]+)\/([\w\d-]+)\/?$/;
+    const {t, i18n} = useTranslation();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,7 +42,10 @@ const GitHubForm = () => {
         if (fieldHasError) return;
         invoke('saveProjectGithubURL', {url: fieldValue}).then(url => {
             showFlag({
-                id: 1, title: "Successfully saved repository URL", description: "URL is now " + url, type: "success"
+                id: 1,
+                title: t("project.tabs.dashboard.saveSuccess"),
+                description: t("project.tabs.dashboard.saveSuccessDescription") + url,
+                type: "success"
             })
         });
     };
@@ -62,7 +67,7 @@ const GitHubForm = () => {
 
     const generateErrorMessage = () => {
         if (fieldHasError) {
-            return <Box as="span">Incorrect URL</Box>;
+            return <Box as="span">{t("project.tabs.dashboard.incorrectUrl")}</Box>;
         }
     };
 
@@ -72,7 +77,7 @@ const GitHubForm = () => {
             {({formProps}) => (
                 <form {...formProps} name="validation-example">
                     <Field
-                        label="Github repository URL"
+                        label={t("project.tabs.dashboard.githubLabel")}
                         isRequired
                         name="command"
                         validate={validate}
@@ -86,7 +91,7 @@ const GitHubForm = () => {
                                     onFocus={handleFocusEvent}
                                     value={fieldValue}
                                 />
-                                {!fieldHasError && <ValidMessage>Your URL is valid</ValidMessage>}
+                                {!fieldHasError && <ValidMessage>{t("project.tabs.dashboard.validUrl")}</ValidMessage>}
                                 {fieldHasError && (
                                     <ErrorMessage>
                                         <Box aria-live="polite" {...errorAttributes}>

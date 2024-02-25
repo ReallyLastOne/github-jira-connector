@@ -1,11 +1,13 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import GitHubForm from "./GitHubForm";
 import SideNav from "./navigation/SideNav";
 
 const App = () => {
+
     return (<>
-        <SideNav></SideNav>
-        <GitHubForm> </GitHubForm>
+        <SideNav/>
+        <GitHubForm/>
     </>);
-}
+};
+
 export default App;

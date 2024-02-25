@@ -1,0 +1,15 @@
+{
+  "project.tabs.dashboard": "Dashboard",
+  "project.tabs.settings": "Settings",
+  "project.tabs.issueAndFields": "Issues & fields",
+  "project.tabs.automation": "Automation",
+  "project.footer.description": "Source code at:",
+  "project.footer.feedback": "Feedback",
+  "project.footer.learn": "Learn more",
+  "project.header.description": "Integration made easy!",
+  "project.tabs.dashboard.saveSuccess": "Successfully saved repository URL",
+  "project.tabs.dashboard.saveSuccessDescription": "URL is now ",
+  "project.tabs.dashboard.incorrectUrl": "Incorrect URL",
+  "project.tabs.dashboard.validUrl": "Your URL is valid",
+  "project.tabs.dashboard.githubLabel": "Github repository URL"
+}

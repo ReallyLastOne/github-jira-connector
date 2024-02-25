@@ -1,0 +1,15 @@
+{
+  "project.tabs.dashboard": "Panel główny",
+  "project.tabs.settings": "Ustawienia",
+  "project.tabs.issueAndFields": "Zgłoszenia i pola",
+  "project.tabs.automation": "Automatyzacja",
+  "project.footer.description": "Kod źródłowy: ",
+  "project.footer.feedback": "Feedback",
+  "project.footer.learn": "Dowiedz się więcej",
+  "project.header.description": "Integracja stała się prosta!",
+  "project.tabs.dashboard.saveSuccess": "Pomyślnie zapisano adres URL repozytorium",
+  "project.tabs.dashboard.saveSuccessDescription": "Adres URL to teraz: ",
+  "project.tabs.dashboard.incorrectUrl": "Nieprawidłowy adres URL",
+  "project.tabs.dashboard.validUrl": "Adres URL jest prawidłowy",
+  "project.tabs.dashboard.githubLabel": "Adres URL repozytorium Github"
+}

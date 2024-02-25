@@ -16,8 +16,11 @@ import {
 import AppFrame from './AppFrame';
 import SampleFooter from './ProjectFooter';
 import ProjectHeader from './ProjectHeader';
+import {useTranslation} from "react-i18next";
 
 const SideNav = () => {
+    const {t, i18n} = useTranslation();
+
     return (<AppFrame shouldHideAppBar>
         <SideNavigation label="project" testId="side-navigation">
             <NavigationHeader>
@@ -29,16 +32,16 @@ const SideNav = () => {
             >
                 <Section isList>
                     <LinkItem iconBefore={<QueueIcon label=""/>}>
-                        Dashboard
+                        {t("project.tabs.dashboard")}
                     </LinkItem>
                     <LinkItem href="#" iconBefore={<SettingsIcon label=""/>}>
-                        Settings
+                        {t("project.tabs.settings")}
                     </LinkItem>
                     <LinkItem iconBefore={<WorkIcon label=""/>}>
-                        Issue & Field sync
+                        {t("project.tabs.issueAndFields")}
                     </LinkItem>
                     <LinkItem href="#" iconBefore={<CustomerIcon label=""/>}>
-                        Automation
+                        {t("project.tabs.automation")}
                     </LinkItem>
                 </Section>
             </NestableNavigationContent>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import '@atlaskit/css-reset';
+import './i18n';
 
 ReactDOM.render(
     <React.StrictMode>

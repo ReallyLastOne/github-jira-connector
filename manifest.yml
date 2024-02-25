@@ -15,7 +15,8 @@ app:
   id: ari:cloud:ecosystem::app/dd7ae7d9-66d5-4312-bad2-ba851a57eac6
 permissions:
   scopes:
+    - read:jira-user
     - storage:app
   content:
     styles:
-      - 'unsafe-inline'
+      - unsafe-inline

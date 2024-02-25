@@ -3,6 +3,7 @@ import Icon from '@atlaskit/icon';
 import {Header} from '@atlaskit/side-navigation';
 
 import SampleIcon from './Logo';
+import {useTranslation} from "react-i18next";
 
 const Container = ({children, ...props}) => {
     return (
@@ -15,10 +16,12 @@ const Container = ({children, ...props}) => {
 };
 
 const ProjectHeader = () => {
+    const {t, i18n} = useTranslation();
+
     return (
         <Header
             component={Container}
-            description="Integration made easy!"
+            description={t('project.header.description')}
             iconBefore={<Icon label="" glyph={SampleIcon} size="medium"/>}
         >
             GitHub &lt;&gt; Jira Connector

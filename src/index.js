@@ -1,5 +1,6 @@
 import Resolver from '@forge/resolver';
-import {storage} from "@forge/api";
+import {route, storage} from "@forge/api";
+import * as api from "@forge/api";
 
 const resolver = new Resolver();
 
@@ -27,5 +28,12 @@ resolver.define('getProjectGithubURL', async (req) => {
 resolver.define('getProjectKey', async (req) => {
     return req.context.extension.project.key;
 });
+
+resolver.define("getUserLanguage", async (req) => {
+    // to change user language visit: https://id.atlassian.com/manage-profile/account-preferences
+    const response = await api.asUser().requestJira(route`/rest/api/3/myself`);
+    const userData = await response.json();
+    return userData.locale;
+})
 
 export const handler = resolver.getDefinitions();
