@@ -1,6 +1,6 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment} from 'react';
 import GitHubForm from "./GitHubForm";
-import SideNav from "./SideNav";
+import SideNav from "./navigation/SideNav";
 
 const App = () => {
     return (<>

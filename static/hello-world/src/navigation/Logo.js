@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { CustomGlyphProps } from '@atlaskit/icon/types';
-
 const RocketIcon = (props) => {
     return (
         <svg
