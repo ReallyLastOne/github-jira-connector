@@ -6,7 +6,7 @@ import GlobalNav from './GlobalNav';
 
 
 const AppFrame = ({
-                      children, shouldHideAppBar, shouldHideBorder, content,
+                      children,
                   }) => {
     return (<div
         onClick={(e) => e.preventDefault()}
@@ -14,26 +14,18 @@ const AppFrame = ({
             height: '100%', minHeight: 600,
         }}
     >
-        {shouldHideAppBar || (<div style={{zIndex: 10, position: 'relative'}}>
-            <GlobalNav/>
-        </div>)}
         <div
             style={{
-                height: shouldHideAppBar ? '100%' : `calc(100% - ${HORIZONTAL_GLOBAL_NAV_HEIGHT}px)`,
-                minHeight: 600,
-                display: 'flex',
+                height: '100%', display: 'flex',
             }}
         >
             <div
                 style={{
-                    minHeight: 600,
-                    borderRight: shouldHideBorder ? undefined : `1px solid ${token('color.border', N40)}`,
+                    borderRight: `1px solid ${token('color.border', N40)}`,
                 }}
             >
                 {children}
             </div>
-
-            {content}
         </div>
     </div>);
 };

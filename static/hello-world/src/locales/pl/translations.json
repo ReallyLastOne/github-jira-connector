@@ -1,7 +1,7 @@
 {
   "project.tabs.dashboard": "Panel główny",
   "project.tabs.settings": "Ustawienia",
-  "project.tabs.issueAndFields": "Zgłoszenia i pola",
+  "project.tabs.issue": "Zgłoszenia i pola",
   "project.tabs.automation": "Automatyzacja",
   "project.footer.description": "Kod źródłowy: ",
   "project.footer.feedback": "Feedback",

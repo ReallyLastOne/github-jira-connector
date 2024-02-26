@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.nav {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    overflow: auto;
+}

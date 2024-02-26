@@ -1,7 +1,7 @@
 {
   "project.tabs.dashboard": "Dashboard",
   "project.tabs.settings": "Settings",
-  "project.tabs.issueAndFields": "Issues & fields",
+  "project.tabs.issue": "Issues & fields",
   "project.tabs.automation": "Automation",
   "project.footer.description": "Source code at:",
   "project.footer.feedback": "Feedback",

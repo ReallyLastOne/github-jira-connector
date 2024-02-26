@@ -5,6 +5,7 @@ modules:
       resolver:
         function: resolver
       title: github-jira-connector
+      layout: blank
   function:
     - key: resolver
       handler: index.handler
