@@ -1,9 +1,5 @@
-import {HORIZONTAL_GLOBAL_NAV_HEIGHT} from '@atlaskit/atlassian-navigation';
 import {N40} from '@atlaskit/theme/colors';
 import {token} from '@atlaskit/tokens';
-
-import GlobalNav from './GlobalNav';
-
 
 const AppFrame = ({
                       children,

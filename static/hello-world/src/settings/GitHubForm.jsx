@@ -5,6 +5,7 @@ import Textfield from '@atlaskit/textfield';
 import Form, {ErrorMessage, Field, FormFooter, ValidMessage} from '@atlaskit/form';
 import {Box} from '@atlaskit/primitives';
 import {useTranslation} from "react-i18next";
+import styles from './Settings.module.css';
 
 const GitHubForm = () => {
     const [fieldValue, setFieldValue] = useState('');
@@ -72,7 +73,7 @@ const GitHubForm = () => {
     };
 
 
-    return (<>
+    return (<div className={styles.form}>
         <Form onSubmit={handleSubmit}>
             {({formProps}) => (
                 <form {...formProps} name="validation-example">
@@ -103,13 +104,15 @@ const GitHubForm = () => {
                         )}
                     </Field>
                     <FormFooter>
-                        <Button type="submit" appearance="primary">
-                            Submit
-                        </Button>
+                        <div className={styles.submit}>
+                            <Button type="submit" appearance="primary">
+                                Submit
+                            </Button>
+                        </div>
                     </FormFooter>
                 </form>
             )}
         </Form>
-    </>);
+    </div>);
 }
 export default GitHubForm;
